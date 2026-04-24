@@ -1,0 +1,30 @@
+site_name: Nextwaves R&D Documentation
+site_author: R&D Department
+
+theme:
+  name: material
+  features:
+    - navigation.tabs # Tạo tab điều hướng phía trên
+    - navigation.sections # Nhóm các bài viết lại với nhau
+    - toc.integrate # Tích hợp mục lục vào menu trái
+  palette:
+    # Chế độ sáng mặc định
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Chuyển sang Dark mode
+    # Chế độ tối (Dark mode)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Chuyển sang Light mode
+
+nav:
+  - Trang chủ: index.md
+  - Tài liệu Hướng dẫn:
+    - Tài liệu hướng dẫn chung KiCad cơ bản: kicad-training.md
+  - Lab 01: LAB1.md
