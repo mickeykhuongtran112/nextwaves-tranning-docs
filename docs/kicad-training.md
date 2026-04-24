@@ -234,7 +234,7 @@ Khi load lên nó sẽ trông thế này. Đây chính xác là những gì nhà
 Sau khi load file Gerber, tiếp tục vào _File -> Open EXCELON Drill File_ và chọn file Drill đã tạo. Bạn sẽ thấy một lớp nữa được thêm vào như hình trên (các lỗ khoan). Sau đó bạn có thể bắt đầu ẩn hiện các lớp để xem chi tiết mọi phần trong thiết kế.
 
 
-![yesyesdrill](<no drill3.png>)
+![yesyesdrill](<pictures/no drill3.png>)
 
 Chỉ cần click vào các ô checkbox ở danh sách Layer bên phải để ẩn các lớp. Bằng cách này, bạn có thể kiểm tra kỹ từng milimet bản thiết kế. Khi đã hài lòng, bạn có thể gửi các file này cho xưởng PCB để họ sản xuất. Chúc mừng! Vậy là bạn đã nắm được toàn bộ quy trình KiCad và sản xuất PCB cơ bản.
 
