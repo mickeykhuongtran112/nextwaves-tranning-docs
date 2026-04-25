@@ -27,5 +27,6 @@ nav:
   - Trang chủ: index.md
   - Tài liệu Hướng dẫn:
     - Tài liệu hướng dẫn chung KiCad cơ bản: kicad-training.md
-  - Lab 01: LAB1.md
-  - Lab 02: LAB2.md
+  - Lab 01(L1): LAB1.md
+  - Lab 02(L2): LAB2.md
+  - Lab 03(L2): LAB3.md

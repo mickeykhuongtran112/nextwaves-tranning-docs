@@ -1,4 +1,6 @@
 # LAB 01 - Power Block 3.3V LDO
+> Mức độ: Dễ (2-3 ngày)
+  
 > [Link Submit](https://forms.office.com/Pages/ResponsePage.aspx?id=dMsRDwTit0uX3TG3jEPS1AShXtfWh3tElWV0mV3zb55UNzZEWDhGQUFCTDFNRjFKWE5BOFpNM0k4MC4u)
 
 ## 1. Mục tiêu
