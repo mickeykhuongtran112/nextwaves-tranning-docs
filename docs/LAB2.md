@@ -1,7 +1,7 @@
 # LAB 02 - Digital Input/Output & Logic Conditioning Block
 > Mức độ: Trung bình (3-4 ngày)
   
-> [Link Submit](https://forms.office.com/Pages/ResponsePage.aspx?id=dMsRDwTit0uX3TG3jEPS1AShXtfWh3tElWV0mV3zb55UQzIzVFZENVhGWVZKUVhHMUhVS0QyVUhISi4u)
+> [Link Submit](https://forms.gle/hSz4mEJFpLDHCGDG9)
 
 ## 1. Mục tiêu
 
