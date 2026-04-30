@@ -1,0 +1,1740 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="R&D Department">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>LAB 05 - Embedded IO Expansion Board Rev-A - Nextwaves R&D Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-05-embedded-io-expansion-board-rev-a" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Nextwaves R&amp;D Documentation" class="md-header__button md-logo" aria-label="Nextwaves R&D Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nextwaves R&D Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LAB 05 - Embedded IO Expansion Board Rev-A
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Chuyển sang Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Chuyển sang Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trang chủ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kicad-training/" class="md-tabs__link">
+          
+  
+  
+  Tài liệu Hướng dẫn
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../LAB1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lab 01(L1)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../LAB2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lab 02(L2)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../LAB3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lab 03(L2)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Nextwaves R&amp;D Documentation" class="md-nav__button md-logo" aria-label="Nextwaves R&D Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Nextwaves R&D Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tài liệu Hướng dẫn
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tài liệu Hướng dẫn
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kicad-training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tài liệu hướng dẫn chung KiCad cơ bản
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LAB1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 01(L1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LAB2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 02(L2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LAB3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 03(L2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-05-embedded-io-expansion-board-rev-a">LAB 05 - Embedded IO Expansion Board Rev-A</h1>
+<h2 id="1-muc-tieu">1. Mục tiêu</h2>
+<p>Thiết kế một board <strong>Embedded IO Expansion Board Rev-A</strong> dùng KiCad 9.</p>
+<p>Board này tổng hợp các khối đã học từ các lab trước:</p>
+<ul>
+<li>Power Block 3.3V</li>
+<li>Digital Input/Output</li>
+<li>I2C Communication</li>
+<li>MOSFET Load Driver</li>
+<li>Custom Library</li>
+<li>PCB Layout 2 lớp</li>
+<li>BOM</li>
+<li>Gerber Release</li>
+</ul>
+<p>Sau bài lab này, bạn cần nắm được:</p>
+<ul>
+<li>Thiết kế một board embedded IO hoàn chỉnh</li>
+<li>Quản lý schematic theo nhiều khối chức năng</li>
+<li>Tái sử dụng và quản lý custom library</li>
+<li>Thiết kế nguồn đầu vào 9-12V xuống 3.3V</li>
+<li>Thiết kế digital input/output</li>
+<li>Thiết kế I2C connector</li>
+<li>Thiết kế MOSFET low-side driver</li>
+<li>Tạo net class cho signal, power và load current</li>
+<li>Layout PCB 2 lớp theo constraint</li>
+<li>Chạy ERC/DRC</li>
+<li>Xuất BOM, Gerber, Drill</li>
+<li>Đóng gói release package để gửi review/sản xuất</li>
+</ul>
+<hr />
+<h2 id="2-yeu-cau-thiet-ke">2. Yêu cầu thiết kế</h2>
+<h3 id="21-chuc-nang-tong-the">2.1. Chức năng tổng thể</h3>
+<p>Thiết kế một board mở rộng IO cho MCU ngoài.</p>
+<p>Board nhận nguồn từ <strong>DC Jack 9-12V</strong>, hạ xuống <strong>3.3V</strong>, sau đó cung cấp các khối IO cơ bản cho MCU:</p>
+<pre><code class="language-text">DC Jack 9-12V
+    |
+    v
+Power Protection + LDO 3.3V
+    |
+    +---- Digital Input Buttons
+    +---- LED Outputs
+    +---- I2C Connector
+    +---- UART Connector
+    +---- MOSFET Load Driver
+    +---- Test Points
+</code></pre>
+<h3 id="22-thong-so-hoat-ong">2.2. Thông số hoạt động</h3>
+<table>
+<thead>
+<tr>
+<th>Hạng mục</th>
+<th>Yêu cầu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input voltage</td>
+<td>9-12V DC</td>
+</tr>
+<tr>
+<td>Logic voltage</td>
+<td>3.3V</td>
+</tr>
+<tr>
+<td>Load voltage</td>
+<td>5-12V</td>
+</tr>
+<tr>
+<td>Load current giả định</td>
+<td>&lt;= 500mA</td>
+</tr>
+<tr>
+<td>PCB layer</td>
+<td>2 lớp</td>
+</tr>
+<tr>
+<td>Board size</td>
+<td>Tối đa 70mm x 50mm</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-connector-yeu-cau">3. Connector yêu cầu</h2>
+<p>Board cần có tối thiểu <strong>6 connector</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Connector</th>
+<th>Tên</th>
+<th>Chức năng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J1</td>
+<td>DC Power Input</td>
+<td>Cấp nguồn 9-12V</td>
+</tr>
+<tr>
+<td>J2</td>
+<td>MCU Main Interface</td>
+<td>Kết nối tín hiệu chính về MCU</td>
+</tr>
+<tr>
+<td>J3</td>
+<td>I2C Connector</td>
+<td>Kết nối thiết bị I2C</td>
+</tr>
+<tr>
+<td>J4</td>
+<td>UART Connector</td>
+<td>Kết nối UART</td>
+</tr>
+<tr>
+<td>J5</td>
+<td>Load Power Input</td>
+<td>Cấp nguồn tải</td>
+</tr>
+<tr>
+<td>J6</td>
+<td>Load Output</td>
+<td>Kết nối tải MOSFET</td>
+</tr>
+</tbody>
+</table>
+<h3 id="j1-dc-power-input">J1 - DC Power Input</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Pin</th>
+<th>Net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>VIN_RAW</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<h3 id="j2-mcu-main-interface">J2 - MCU Main Interface</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Pin</th>
+<th>Net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>3V3</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>GND</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>BTN1</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>BTN2</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>LED1_CTRL</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>LED2_CTRL</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>SDA</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>SCL</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>UART_TX</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>UART_RX</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>MOS_CTRL</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<h3 id="j3-i2c-connector">J3 - I2C Connector</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Pin</th>
+<th>Net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>3V3</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>GND</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>SDA</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>SCL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="j4-uart-connector">J4 - UART Connector</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Pin</th>
+<th>Net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>3V3</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>GND</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>UART_TX</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>UART_RX</td>
+</tr>
+</tbody>
+</table>
+<h3 id="j5-load-power-input">J5 - Load Power Input</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Pin</th>
+<th>Net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>VLOAD</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<h3 id="j6-load-output">J6 - Load Output</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Pin</th>
+<th>Net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>VLOAD</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>LOAD_SW</td>
+</tr>
+</tbody>
+</table>
+<p>Lưu ý:</p>
+<ul>
+<li><code>GND</code> logic và <code>GND</code> tải phải nối chung trên board.</li>
+<li><code>3V3</code> được tạo từ LDO trên board.</li>
+<li><code>VLOAD</code> là nguồn riêng cấp cho tải, không đi qua LDO 3.3V.</li>
+</ul>
+<hr />
+<h2 id="4-linh-kien-yeu-cau">4. Linh kiện yêu cầu</h2>
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Linh kiện</th>
+<th>Package đề xuất</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J1</td>
+<td>DC Jack</td>
+<td>Theo datasheet</td>
+<td>Input 9-12V</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>PPTC Fuse</td>
+<td>1206 / 1812</td>
+<td>Bảo vệ quá dòng</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>Schottky Diode</td>
+<td>SOD-123 / SMA / SMB</td>
+<td>Chống ngược cực</td>
+</tr>
+<tr>
+<td>U1</td>
+<td>AMS1117-3.3 hoặc LDO tương đương</td>
+<td>SOT-223 / SOT-23-5</td>
+<td>Tạo 3.3V</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>Input capacitor</td>
+<td>0805 / 1206</td>
+<td>10uF</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>Input bypass capacitor</td>
+<td>0603 / 0805</td>
+<td>100nF</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>Output capacitor</td>
+<td>0805 / 1206</td>
+<td>10uF</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>Output bypass capacitor</td>
+<td>0603 / 0805</td>
+<td>100nF</td>
+</tr>
+<tr>
+<td>SW1, SW2</td>
+<td>Button SMD</td>
+<td>SMD tact switch</td>
+<td>Digital input</td>
+</tr>
+<tr>
+<td>R1, R2</td>
+<td>Pull resistor</td>
+<td>0603 / 0805</td>
+<td>Pull-up/pull-down</td>
+</tr>
+<tr>
+<td>D2, D3</td>
+<td>User LED</td>
+<td>0603 / 0805</td>
+<td>LED output</td>
+</tr>
+<tr>
+<td>R3, R4</td>
+<td>LED resistor</td>
+<td>0603 / 0805</td>
+<td>Hạn dòng LED</td>
+</tr>
+<tr>
+<td>R5, R6</td>
+<td>I2C pull-up</td>
+<td>0603 / 0805</td>
+<td>SDA/SCL pull-up</td>
+</tr>
+<tr>
+<td>JP1, JP2</td>
+<td>Solder jumper</td>
+<td>SMD jumper</td>
+<td>Bật/tắt pull-up I2C</td>
+</tr>
+<tr>
+<td>Q1</td>
+<td>Logic-level N-MOSFET</td>
+<td>SOT-23</td>
+<td>Low-side driver</td>
+</tr>
+<tr>
+<td>R7</td>
+<td>Gate resistor</td>
+<td>0603 / 0805</td>
+<td>47R - 220R</td>
+</tr>
+<tr>
+<td>R8</td>
+<td>Gate pull-down</td>
+<td>0603 / 0805</td>
+<td>47k - 100k</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>Flyback diode</td>
+<td>SOD-123 / SMA</td>
+<td>Bảo vệ tải cảm</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>Power LED 3.3V</td>
+<td>0603 / 0805</td>
+<td>Báo nguồn logic</td>
+</tr>
+<tr>
+<td>R9</td>
+<td>Power LED resistor</td>
+<td>0603 / 0805</td>
+<td>1k - 2.2k</td>
+</tr>
+<tr>
+<td>TPx</td>
+<td>Test point</td>
+<td>SMD test pad</td>
+<td>Debug nguồn và tín hiệu</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-yeu-cau-library">5. Yêu cầu Library</h2>
+<p>Bạn cần có tối thiểu <strong>2 custom symbol/footprint</strong> trong project.</p>
+<p>Bắt buộc có:</p>
+<table>
+<thead>
+<tr>
+<th>Linh kiện</th>
+<th>Yêu cầu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC Jack</td>
+<td>Custom symbol và footprint</td>
+</tr>
+<tr>
+<td>LDO</td>
+<td>Custom symbol và footprint</td>
+</tr>
+</tbody>
+</table>
+<p>Chọn thêm ít nhất 1 linh kiện để tự tạo hoặc chỉnh sửa footprint:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Yêu cầu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Option A</td>
+<td>MOSFET SOT-23</td>
+</tr>
+<tr>
+<td>Option B</td>
+<td>I2C connector</td>
+</tr>
+<tr>
+<td>Option C</td>
+<td>Load connector</td>
+</tr>
+<tr>
+<td>Option D</td>
+<td>Solder jumper</td>
+</tr>
+</tbody>
+</table>
+<p>Thư viện phải đặt trong project:</p>
+<pre><code class="language-text">lib/
+├── symbols/
+│   └── custom_embedded_io_symbols.kicad_sym
+└── footprints/
+    └── custom_embedded_io_footprints.pretty/
+</code></pre>
+<h3 id="yeu-cau-chung-cho-footprint-custom">Yêu cầu chung cho footprint custom</h3>
+<ul>
+<li>Đúng kích thước theo datasheet</li>
+<li>Đúng pad numbering</li>
+<li>Có silkscreen outline</li>
+<li>Có courtyard</li>
+<li>Có pin 1 marker nếu linh kiện cần phân cực/hướng</li>
+<li>Không để silkscreen đè pad</li>
+</ul>
+<hr />
+<h2 id="6-yeu-cau-schematic">6. Yêu cầu Schematic</h2>
+<p>Schematic cần chia thành các khối rõ ràng:</p>
+<pre><code class="language-text">1. Power Input &amp; Protection
+2. 3.3V LDO Power
+3. Digital Input Buttons
+4. LED Outputs
+5. I2C Interface
+6. UART Interface
+7. MOSFET Load Driver
+8. Test Points
+</code></pre>
+<h3 id="61-power-block">6.1. Power Block</h3>
+<p>Bắt buộc có:</p>
+<ol>
+<li>DC Jack input 9-12V.</li>
+<li>PPTC fuse.</li>
+<li>Schottky diode chống ngược cực.</li>
+<li>LDO 3.3V.</li>
+<li>Tụ input:</li>
+<li>10uF</li>
+<li>100nF</li>
+<li>Tụ output:</li>
+<li>10uF</li>
+<li>100nF</li>
+<li>LED báo nguồn 3.3V.</li>
+<li>Test point:</li>
+<li><code>VIN_RAW</code></li>
+<li><code>VIN_PROTECTED</code></li>
+<li><code>3V3</code></li>
+<li><code>GND</code></li>
+</ol>
+<h3 id="62-digital-input-block">6.2. Digital Input Block</h3>
+<p>Bắt buộc có:</p>
+<ol>
+<li>2 button SMD.</li>
+<li>Mỗi button có pull-up hoặc pull-down.</li>
+<li>Tín hiệu output:</li>
+<li><code>BTN1</code></li>
+<li><code>BTN2</code></li>
+<li>Test point:</li>
+<li><code>BTN1</code></li>
+<li><code>BTN2</code></li>
+</ol>
+<h3 id="63-led-output-block">6.3. LED Output Block</h3>
+<p>Bắt buộc có:</p>
+<ol>
+<li>2 LED output điều khiển từ MCU.</li>
+<li>Mỗi LED có điện trở hạn dòng.</li>
+<li>Tín hiệu điều khiển:</li>
+<li><code>LED1_CTRL</code></li>
+<li><code>LED2_CTRL</code></li>
+</ol>
+<h3 id="64-i2c-block">6.4. I2C Block</h3>
+<p>Bắt buộc có:</p>
+<ol>
+<li>I2C connector <code>J3</code>.</li>
+<li>Pull-up resistor cho <code>SDA</code> và <code>SCL</code>.</li>
+<li>Solder jumper bật/tắt pull-up.</li>
+<li>Test point:</li>
+<li><code>SDA</code></li>
+<li><code>SCL</code></li>
+</ol>
+<h3 id="65-uart-block">6.5. UART Block</h3>
+<p>Bắt buộc có:</p>
+<ol>
+<li>UART connector <code>J4</code>.</li>
+<li>Tín hiệu:</li>
+<li><code>UART_TX</code></li>
+<li><code>UART_RX</code></li>
+<li>Test point:</li>
+<li><code>UART_TX</code></li>
+<li><code>UART_RX</code></li>
+</ol>
+<h3 id="66-mosfet-load-driver-block">6.6. MOSFET Load Driver Block</h3>
+<p>Bắt buộc có:</p>
+<ol>
+<li>N-MOSFET logic-level.</li>
+<li>Gate resistor.</li>
+<li>Gate pull-down resistor.</li>
+<li>Flyback diode.</li>
+<li>Load power input <code>J5</code>.</li>
+<li>Load output <code>J6</code>.</li>
+<li>Tín hiệu điều khiển:</li>
+<li><code>MOS_CTRL</code></li>
+<li>Switching node:</li>
+<li><code>LOAD_SW</code></li>
+<li>Test point:</li>
+<li><code>VLOAD</code></li>
+<li><code>MOS_CTRL</code></li>
+<li><code>LOAD_SW</code></li>
+</ol>
+<h3 id="67-net-name-bat-buoc">6.7. Net name bắt buộc</h3>
+<table>
+<thead>
+<tr>
+<th>Net</th>
+<th>Ý nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>VIN_RAW</code></td>
+<td>Nguồn sau DC Jack</td>
+</tr>
+<tr>
+<td><code>VIN_FUSED</code></td>
+<td>Nguồn sau PPTC</td>
+</tr>
+<tr>
+<td><code>VIN_PROTECTED</code></td>
+<td>Nguồn sau diode Schottky</td>
+</tr>
+<tr>
+<td><code>3V3</code></td>
+<td>Nguồn logic</td>
+</tr>
+<tr>
+<td><code>GND</code></td>
+<td>Ground chung</td>
+</tr>
+<tr>
+<td><code>BTN1</code></td>
+<td>Button input 1</td>
+</tr>
+<tr>
+<td><code>BTN2</code></td>
+<td>Button input 2</td>
+</tr>
+<tr>
+<td><code>LED1_CTRL</code></td>
+<td>Điều khiển LED 1</td>
+</tr>
+<tr>
+<td><code>LED2_CTRL</code></td>
+<td>Điều khiển LED 2</td>
+</tr>
+<tr>
+<td><code>SDA</code></td>
+<td>I2C data</td>
+</tr>
+<tr>
+<td><code>SCL</code></td>
+<td>I2C clock</td>
+</tr>
+<tr>
+<td><code>UART_TX</code></td>
+<td>UART transmit</td>
+</tr>
+<tr>
+<td><code>UART_RX</code></td>
+<td>UART receive</td>
+</tr>
+<tr>
+<td><code>VLOAD</code></td>
+<td>Nguồn tải</td>
+</tr>
+<tr>
+<td><code>MOS_CTRL</code></td>
+<td>Điều khiển MOSFET</td>
+</tr>
+<tr>
+<td><code>LOAD_SW</code></td>
+<td>Switching node của tải</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-yeu-cau-layout-pcb">7. Yêu cầu Layout PCB</h2>
+<table>
+<thead>
+<tr>
+<th>Hạng mục</th>
+<th>Yêu cầu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCB layer</td>
+<td>2 lớp</td>
+</tr>
+<tr>
+<td>Board size</td>
+<td>Tối đa 70mm x 50mm</td>
+</tr>
+<tr>
+<td>Track signal</td>
+<td>8-12 mil</td>
+</tr>
+<tr>
+<td>Track 3V3 power</td>
+<td>Tối thiểu 20 mil</td>
+</tr>
+<tr>
+<td>Track VIN/VLOAD</td>
+<td>Tối thiểu 30-40 mil</td>
+</tr>
+<tr>
+<td>Clearance</td>
+<td>Tối thiểu 8 mil</td>
+</tr>
+<tr>
+<td>GND Plane</td>
+<td>Bắt buộc</td>
+</tr>
+<tr>
+<td>Test point</td>
+<td>Đặt ở top side</td>
+</tr>
+<tr>
+<td>DRC</td>
+<td>Pass</td>
+</tr>
+</tbody>
+</table>
+<h3 id="net-class-yeu-cau">Net class yêu cầu</h3>
+<p>Tạo tối thiểu 4 net class:</p>
+<table>
+<thead>
+<tr>
+<th>Net Class</th>
+<th>Net áp dụng</th>
+<th style="text-align: right;">Width đề xuất</th>
+<th style="text-align: right;">Clearance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signal</td>
+<td><code>BTNx</code>, <code>LEDx_CTRL</code>, <code>SDA</code>, <code>SCL</code>, <code>UART_TX</code>, <code>UART_RX</code>, <code>MOS_CTRL</code></td>
+<td style="text-align: right;">8-12 mil</td>
+<td style="text-align: right;">8 mil</td>
+</tr>
+<tr>
+<td>Logic_Power</td>
+<td><code>3V3</code></td>
+<td style="text-align: right;">&gt;= 20 mil</td>
+<td style="text-align: right;">8 mil</td>
+</tr>
+<tr>
+<td>Input_Power</td>
+<td><code>VIN_RAW</code>, <code>VIN_FUSED</code>, <code>VIN_PROTECTED</code></td>
+<td style="text-align: right;">&gt;= 30 mil</td>
+<td style="text-align: right;">8-10 mil</td>
+</tr>
+<tr>
+<td>Load_Current</td>
+<td><code>VLOAD</code>, <code>LOAD_SW</code></td>
+<td style="text-align: right;">&gt;= 30-40 mil</td>
+<td style="text-align: right;">8-10 mil</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quy-tac-placement">Quy tắc placement</h3>
+<ul>
+<li>J1 DC Power Input đặt sát mép board</li>
+<li>Power protection đặt gần J1</li>
+<li>LDO và tụ input/output đặt gần nhau</li>
+<li>Tab LDO cần vùng copper hỗ trợ tản nhiệt</li>
+<li>J2 MCU Main Interface đặt sát mép board, dễ kết nối</li>
+<li>J3 I2C Connector đặt sát mép board</li>
+<li>J4 UART Connector đặt sát mép board</li>
+<li>J5/J6 load connector đặt gần MOSFET</li>
+<li>MOSFET đặt gần load connector</li>
+<li>Gate resistor đặt gần gate MOSFET</li>
+<li>Flyback diode đặt gần load output hoặc MOSFET</li>
+<li>Button đặt dễ thao tác</li>
+<li>LED đặt dễ quan sát</li>
+<li>Test point đặt ở top side, dễ đo</li>
+<li>Đường dòng tải phải ngắn và rộng</li>
+<li>GND plane phủ toàn mạch</li>
+<li>Silkscreen không được đè pad</li>
+<li>Silkscreen phải ghi rõ connector, chiều nguồn, tín hiệu chính</li>
+</ul>
+<hr />
+<h2 id="8-gerber-release-requirement">8. Gerber Release Requirement</h2>
+<p>Sau khi hoàn thành layout, bạn cần xuất file sản xuất.</p>
+<p>Bắt buộc có:</p>
+<pre><code class="language-text">Gerber files
+Drill files
+BOM
+Schematic PDF
+PCB top image
+PCB bottom image
+PCB 3D image
+ERC report
+DRC report
+</code></pre>
+<p>Bạn cần mở lại Gerber bằng <strong>Gerber Viewer</strong> để kiểm tra:</p>
+<pre><code class="language-text">[ ] Board outline đúng
+[ ] Top copper đúng
+[ ] Bottom copper đúng
+[ ] Solder mask đúng
+[ ] Silkscreen không bị lỗi quan trọng
+[ ] Drill đúng vị trí
+[ ] Không thiếu layer quan trọng
+</code></pre>
+<hr />
+<h2 id="9-cau-truc-thu-muc-nop-bai">9. Cấu trúc thư mục nộp bài</h2>
+<p>Bạn cần nộp project theo cấu trúc sau:</p>
+<pre><code class="language-text">HW05_Embedded_IO_Expansion_RevA/
+├── datasheet/
+│   ├── dc_jack_datasheet.pdf
+│   ├── ldo_datasheet.pdf
+│   ├── mosfet_datasheet.pdf
+│   ├── diode_datasheet.pdf
+│   └── connector_datasheet.pdf
+├── docs/
+│   ├── README.md
+│   └── release_note.md
+├── lib/
+│   ├── symbols/
+│   │   └── custom_embedded_io_symbols.kicad_sym
+│   └── footprints/
+│       └── custom_embedded_io_footprints.pretty/
+├── output/
+│   ├── pdf/
+│   │   └── schematic.pdf
+│   ├── bom/
+│   │   └── bom.csv
+│   ├── gerber/
+│   ├── drill/
+│   ├── images/
+│   │   ├── pcb_top.png
+│   │   ├── pcb_bottom.png
+│   │   └── pcb_3d.png
+│   ├── erc_report.txt
+│   └── drc_report.txt
+├── HW05_Embedded_IO_Expansion_RevA.kicad_pro
+├── HW05_Embedded_IO_Expansion_RevA.kicad_sch
+└── HW05_Embedded_IO_Expansion_RevA.kicad_pcb
+</code></pre>
+<hr />
+<h2 id="10-readme-yeu-cau">10. README yêu cầu</h2>
+<p>File <code>README.md</code> cần có các mục sau:</p>
+<pre><code class="language-markdown"># HW05 Embedded IO Expansion Board Rev-A
+
+## 1. Project Description
+
+Mô tả ngắn chức năng board.
+
+## 2. Board Specification
+
+- Input voltage:
+- Logic voltage:
+- Load voltage:
+- Load current:
+- PCB layer:
+- Board size:
+- LDO used:
+- MOSFET used:
+
+## 3. Block Diagram
+
+Mô tả hoặc vẽ sơ đồ khối:
+
+- Power Block
+- Digital Input
+- LED Output
+- I2C
+- UART
+- MOSFET Driver
+
+## 4. Connector Pinout
+
+### J1 - DC Power Input
+
+| Pin | Net | Description |
+|---:|---|---|
+| 1 | VIN_RAW | DC input 9-12V |
+| 2 | GND | Ground |
+
+### J2 - MCU Main Interface
+
+| Pin | Net | Description |
+|---:|---|---|
+| 1 | 3V3 | Logic power |
+| 2 | GND | Ground |
+| 3 | BTN1 | Button input 1 |
+| 4 | BTN2 | Button input 2 |
+| 5 | LED1_CTRL | LED control 1 |
+| 6 | LED2_CTRL | LED control 2 |
+| 7 | SDA | I2C data |
+| 8 | SCL | I2C clock |
+| 9 | UART_TX | UART transmit |
+| 10 | UART_RX | UART receive |
+| 11 | MOS_CTRL | MOSFET control |
+| 12 | GND | Ground |
+
+### J3 - I2C Connector
+
+| Pin | Net | Description |
+|---:|---|---|
+| 1 | 3V3 | I2C power |
+| 2 | GND | Ground |
+| 3 | SDA | I2C data |
+| 4 | SCL | I2C clock |
+
+### J4 - UART Connector
+
+| Pin | Net | Description |
+|---:|---|---|
+| 1 | 3V3 | Logic power |
+| 2 | GND | Ground |
+| 3 | UART_TX | UART transmit |
+| 4 | UART_RX | UART receive |
+
+### J5 - Load Power Input
+
+| Pin | Net | Description |
+|---:|---|---|
+| 1 | VLOAD | Load supply |
+| 2 | GND | Ground |
+
+### J6 - Load Output
+
+| Pin | Net | Description |
+|---:|---|---|
+| 1 | VLOAD | Load positive |
+| 2 | LOAD_SW | Low-side switched node |
+
+## 5. Custom Library
+
+Liệt kê symbol/footprint tự tạo hoặc chỉnh sửa:
+
+- DC Jack:
+- LDO:
+- Additional custom component:
+
+## 6. Symbol-Footprint Mapping
+
+| Component | Symbol Pin | Pin Name | Footprint Pad | Note |
+|---|---:|---|---:|---|
+| LDO | 1 | GND/ADJ | 1 | Ground |
+| LDO | 2 | VOUT | 2 | 3.3V output |
+| LDO | 3 | VIN | 3 | Protected input |
+| LDO | TAB | VOUT | TAB | Thermal tab |
+| MOSFET | 1 | GATE | 1 | Control input |
+| MOSFET | 2 | SOURCE | 2 | Ground |
+| MOSFET | 3 | DRAIN | 3 | Load switching node |
+
+## 7. Design Notes
+
+Giải thích ngắn:
+
+- Power protection: PPTC + Schottky diode
+- Vai trò tụ input/output của LDO
+- Digital input pull-up/pull-down
+- I2C pull-up và jumper bật/tắt
+- MOSFET low-side driver
+- Flyback diode
+- Net class và track width
+- GND plane
+- Các điểm cần chú ý khi layout
+
+## 8. ERC/DRC Result
+
+Ghi kết quả ERC/DRC.
+
+## 9. Gerber Check Result
+
+Ghi kết quả kiểm tra Gerber Viewer.
+
+## 10. Known Issues
+
+Ghi rõ nếu còn điểm chưa chắc chắn hoặc rủi ro thiết kế.
+</code></pre>
+<hr />
+<h2 id="11-release-note-yeu-cau">11. Release Note yêu cầu</h2>
+<p>File <code>release_note.md</code> cần có:</p>
+<pre><code class="language-markdown"># Release Note - HW05 Embedded IO Expansion Board Rev-A
+
+## Version
+
+Rev-A
+
+## Release Files
+
+- Schematic PDF:
+- BOM:
+- Gerber folder:
+- Drill folder:
+- PCB images:
+- ERC report:
+- DRC report:
+
+## Manufacturing Notes
+
+- PCB layer:
+- PCB thickness:
+- Copper thickness:
+- Surface finish:
+- Minimum trace/clearance:
+- Board size:
+
+## Known Issues
+
+Liệt kê lỗi/rủi ro còn tồn tại nếu có.
+
+## Review Checklist
+
+- [ ] ERC pass
+- [ ] DRC pass
+- [ ] Gerber opened and checked
+- [ ] Board outline correct
+- [ ] Drill file correct
+- [ ] BOM exported
+- [ ] Connector pinout checked
+- [ ] Silkscreen checked
+</code></pre>
+<hr />
+<h2 id="12-ket-qua-can-at">12. Kết quả cần đạt</h2>
+<p>Sau khi hoàn thành, bạn cần có:</p>
+<ul>
+<li>Project KiCad mở được đầy đủ</li>
+<li>Schematic chia block rõ ràng</li>
+<li>Có Power Block 9-12V xuống 3.3V</li>
+<li>Có protection: PPTC + Schottky diode</li>
+<li>Có digital input 2 button</li>
+<li>Có LED output 2 channel</li>
+<li>Có I2C connector và pull-up</li>
+<li>Có UART connector</li>
+<li>Có MOSFET low-side driver</li>
+<li>Có flyback diode</li>
+<li>Có tối thiểu 6 connector đúng pinout</li>
+<li>Có test point cho nguồn và tín hiệu chính</li>
+<li>Có tối thiểu 2 custom symbol/footprint trong thư mục <code>lib/</code></li>
+<li>Có net class cho signal, power, load current</li>
+<li>ERC không có lỗi nghiêm trọng</li>
+<li>PCB layout 2 lớp đúng constraint</li>
+<li>Track dòng nguồn/tải đúng yêu cầu</li>
+<li>Có GND plane</li>
+<li>DRC pass</li>
+<li>Có BOM</li>
+<li>Có Gerber và Drill</li>
+<li>Có kiểm tra Gerber Viewer</li>
+<li>Có ảnh PCB top/bottom/3D</li>
+<li>Có README và release note</li>
+</ul>
+<hr />
+<h2 id="13-tieu-chi-anh-gia">13. Tiêu chí đánh giá</h2>
+<table>
+<thead>
+<tr>
+<th>Tiêu chí</th>
+<th style="text-align: right;">Điểm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project structure đúng</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Schematic chia block rõ, đúng nguyên lý</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td>Custom library đúng</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td>Connector và pinout rõ ràng</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Net class và track width đúng</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Layout PCB hợp lý</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td>ERC/DRC pass</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Gerber/Drill release đầy đủ</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>README và release note rõ ràng</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+<p>Tổng điểm: <strong>100</strong></p>
+<hr />
+<h2 id="14-checklist-truoc-khi-nop">14. Checklist trước khi nộp</h2>
+<pre><code class="language-text">[ ] Project mở được trên KiCad 9.
+[ ] Có đầy đủ datasheet sử dụng.
+[ ] Có tối thiểu 2 custom symbol/footprint.
+[ ] Pin symbol khớp pad footprint.
+[ ] Có J1 DC Power Input.
+[ ] Có J2 MCU Main Interface.
+[ ] Có J3 I2C Connector.
+[ ] Có J4 UART Connector.
+[ ] Có J5 Load Power Input.
+[ ] Có J6 Load Output.
+[ ] Power Block có PPTC, Schottky diode, LDO, tụ input/output.
+[ ] LDO tạo ra net 3V3 đúng.
+[ ] Có LED báo nguồn 3.3V.
+[ ] Có 2 button input.
+[ ] Có pull-up/pull-down cho button.
+[ ] Có 2 LED output.
+[ ] Có I2C pull-up cho SDA/SCL.
+[ ] Có jumper bật/tắt pull-up I2C.
+[ ] Có UART_TX và UART_RX.
+[ ] Có MOSFET low-side driver.
+[ ] MOSFET có gate resistor.
+[ ] MOSFET có gate pull-down.
+[ ] Có flyback diode đúng chiều.
+[ ] Có test point cho nguồn và tín hiệu chính.
+[ ] Net name đúng yêu cầu.
+[ ] Có net class Signal, Logic_Power, Input_Power, Load_Current.
+[ ] Track VIN/VLOAD đạt tối thiểu 30-40 mil.
+[ ] Track 3V3 đạt tối thiểu 20 mil.
+[ ] ERC không có lỗi nghiêm trọng.
+[ ] PCB 2 lớp.
+[ ] Có GND plane.
+[ ] Silkscreen không đè pad.
+[ ] Connector có label rõ.
+[ ] DRC pass.
+[ ] Có schematic PDF.
+[ ] Có BOM.
+[ ] Có Gerber.
+[ ] Có Drill.
+[ ] Đã kiểm tra Gerber bằng Gerber Viewer.
+[ ] Có ảnh PCB top/bottom/3D.
+[ ] README đầy đủ.
+[ ] release_note.md đầy đủ.
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
