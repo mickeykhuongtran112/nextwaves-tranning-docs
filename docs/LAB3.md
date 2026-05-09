@@ -1,6 +1,8 @@
 # LAB 03 - I2C Sensor Communication Block
 > Mức độ: Trung bình (3-4 ngày)
-  
+
+> [Link Submit](https://forms.gle/m5Ad7Kv8nSxDZNik7)
+
 ## 1. Mục tiêu
 
 Thiết kế một mạch **I2C Sensor Communication Block** dùng KiCad 9.
