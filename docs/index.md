@@ -12,7 +12,7 @@ Chào mừng các bạn gia nhập Nextwaves Team. Đây là hệ thống tài l
 | Thành viên | LAB 01(L1) | LAB 02(L2) | LAB 03(L2) | LAB 04(L2) | Note |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Phuoc.T** | -- | -- | - | - | - |
-| **Han. D** | 100% | 100% | - | - | Lab1 submit at: 11:21am 1/5; Result at: 11:24pm 1/5  Resub: 10:21pm 2/5; Result at: 11:01pm 2/5  Resub at: 12:22pm 7/5 <br> Lab2 submit at 0:22 4/5; Result at 8:22 5/5 <br> Resub at: 8:30pm 6/5 |
+| **Han. D** | 100% | 100% | 90% | - | Lab1 submit at: 11:21am 1/5; Result at: 11:24pm 1/5  Resub: 10:21pm 2/5; Result at: 11:01pm 2/5  Resub at: 12:22pm 7/5 <br> Lab2 submit at 0:22 4/5; Result at 8:22 5/5 <br> Resub at: 8:30pm 6/5 <br> Lab3 submit at 11/5. Note: Cần layout phủ gnd liền lạc hơn tại các hole terminal  |
 | **Diem. N** | -- | -- | - | - | - |
 | **Bao. N** | -- | -- | - | - | - |
 | **Updating...** | -- | -- | - | - |
